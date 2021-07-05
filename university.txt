@@ -10,20 +10,24 @@ laurea (286)
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
 1. 
-    SELECT `date_of_birth`
+    SELECT *
     FROM `students`
     WHERE YEAR(`date_of_birth`) = '1990';
 
 2.
-    SELECT `cfu`
+    SELECT *
     FROM `courses`
     WHERE `cfu` > '10';
 
 3. 
-    inserisci_query
+    SELECT *
+    FROM `students`
+    WHERE `date_of_birth` <= '1991-07-05';
 
 4.
-    inserisci_query
+    SELECT *
+    FROM `courses`
+    WHERE `period` = 'I semestre' AND `year` = '1';
 
 5. 
     inserisci_query
