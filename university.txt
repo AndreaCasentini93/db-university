@@ -44,5 +44,6 @@ laurea (286)
     FROM `departments`;
 
 8.
-    inserisci_query
-
+    SELECT COUNT(*) AS `teachers_without_phone`
+    FROM `teachers`
+    WHERE `phone` IS NULL;
