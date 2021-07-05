@@ -40,7 +40,8 @@ laurea (286)
     WHERE `level` = 'magistrale';
 
 7. 
-    inserisci_query
+    SELECT COUNT(*) AS `number_of_departments`
+    FROM `departments`;
 
 8.
     inserisci_query
