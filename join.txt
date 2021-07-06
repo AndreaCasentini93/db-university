@@ -69,7 +69,7 @@ QUERY:
     ORDER BY `teachers`.`surname`, `teachers`.`name`;
 
 7.
-    SELECT `students`.`name`, `students`.`surname`, `students`.`registration_number`, COUNT(`exam_student`.`vote`) AS `attempts`, MAX(`exam_student`.`vote`) AS `max_vote`
+    SELECT `students`.`name`, `students`.`surname`, `students`.`registration_number`, `courses`.`name`, COUNT(`exam_student`.`vote`) AS `attempts`, MAX(`exam_student`.`vote`) AS `max_vote`
     FROM `students`
     INNER JOIN `exam_student`
     ON `students`.`id` = `exam_student`.`student_id`
