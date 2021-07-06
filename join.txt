@@ -69,9 +69,14 @@ QUERY:
     ORDER BY `teachers`.`surname`, `teachers`.`name`;
 
 7.
-    SELECT `students`.`name`, `students`.`surname`, `students`.`registration_number`, `exam_student`.`exam_id`, COUNT(`exam_student`.`exam_id`) AS `attempts`
+    SELECT `students`.`name`, `students`.`surname`, `students`.`registration_number`, COUNT(`exam_student`.`vote`) AS `attempts`, MAX(`exam_student`.`vote`) AS `max_vote`
     FROM `students`
     INNER JOIN `exam_student`
     ON `students`.`id` = `exam_student`.`student_id`
-    GROUP BY `exam_student`.`student_id`, `exam_student`.`exam_id`
+    INNER JOIN `exams`
+    ON `exam_student`.`exam_id` = `exams`.`id`
+    INNER JOIN `courses`
+    ON `exams`.`course_id` = `courses`.`id`
+    GROUP BY `courses`.`id`, `students`.`id`
+    HAVING `max_vote` >= 18
     ORDER BY `students`.`surname`, `students`.`name`;
