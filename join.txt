@@ -14,7 +14,7 @@ QUERY:
     INNER JOIN `degrees`
     ON `students`.`degree_id` = `degrees`.`id`
     WHERE `degrees`.`name` = 'Corso di Laurea in Economia'
-    ORDER BY `students`.`surname`;
+    ORDER BY `students`.`surname`, `students`.`name`;
 
 2.
     SELECT `degrees`.`name`, `degrees`.`level`, `degrees`.`address`, `degrees`.`email`, `degrees`.`website`
