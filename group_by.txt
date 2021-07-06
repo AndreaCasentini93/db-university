@@ -6,7 +6,7 @@ ESERCIZI:
 
 QUERY:
 1.
-    SELECT YEAR(`enrolment_date`) AS `academic_year`, COUNT(*) AS `number_of_subscribers`
+    SELECT YEAR(`enrolment_date`) AS `academic_year`, COUNT(*) AS `subscribers_number`
     FROM `students`
     GROUP BY `academic_year`;
 
