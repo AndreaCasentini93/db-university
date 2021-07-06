@@ -74,4 +74,4 @@ QUERY:
     INNER JOIN `exam_student`
     ON `students`.`id` = `exam_student`.`student_id`
     GROUP BY `exam_student`.`student_id`, `exam_student`.`exam_id`
-    ORDER BY `attempts`;
+    ORDER BY `students`.`surname`, `students`.`name`;
