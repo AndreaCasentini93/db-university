@@ -19,7 +19,12 @@ QUERY:
     ORDER BY `students`.`surname`;
 
 2.
-    
+    SELECT `degrees`.`name`, `degrees`.`level`, `degrees`.`address`, `degrees`.`email`, `degrees`.`website`
+    FROM `degrees`
+    INNER JOIN `departments`
+    ON `degrees`.`department_id` = `departments`.`id`
+    WHERE `departments`.`name` = 'Dipartimento di Neuroscienze'
+    ORDER BY `degrees`.`id`;
 
 3.
     
