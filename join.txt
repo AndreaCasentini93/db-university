@@ -69,4 +69,9 @@ QUERY:
     ORDER BY `teachers`.`surname`, `teachers`.`name`;
 
 7.
-    
+    SELECT `students`.`name`, `students`.`surname`, `students`.`registration_number`, `exam_student`.`exam_id`, COUNT(`exam_student`.`exam_id`) AS `attempts`
+    FROM `students`
+    INNER JOIN `exam_student`
+    ON `students`.`id` = `exam_student`.`student_id`
+    GROUP BY `exam_student`.`student_id`, `exam_student`.`exam_id`
+    ORDER BY `attempts`;
