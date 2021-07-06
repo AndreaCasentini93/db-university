@@ -16,7 +16,12 @@ QUERY:
     GROUP BY `office_address`;
 
 3.
-    
+    SELECT `exams`.`date` AS `exam_appeal`, AVG(`exam_student`.`vote`) AS `votes_average`
+    FROM `exam_student`
+    INNER JOIN `exams`
+    ON `exam_student`.`exam_id` = `exams`.`id`
+    GROUP BY `exams`.`date`
+    ORDER BY `exams`.`date`;
 
 4.
     
