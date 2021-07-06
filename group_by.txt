@@ -24,4 +24,8 @@ QUERY:
     ORDER BY `exams`.`date`;
 
 4.
-    
+    SELECT `departments`.`name` AS `department`, COUNT(`degrees`.`id`) AS `degrees_number`
+    FROM `degrees`
+    INNER JOIN `departments`
+    ON `degrees`.`department_id` = `departments`.`id`
+    GROUP BY `departments`.`id`;
