@@ -55,7 +55,7 @@ QUERY:
     ORDER BY `degrees`.`id`;
 
 6.
-    SELECT `teachers`.`name`, `teachers`.`surname`, `teachers`.`phone`, `teachers`.`email`, `teachers`.`office_address`, `teachers`.`office_number`
+    SELECT DISTINCT `teachers`.`name`, `teachers`.`surname`, `teachers`.`phone`, `teachers`.`email`, `teachers`.`office_address`, `teachers`.`office_number`
     FROM `teachers`
     INNER JOIN `course_teacher`
     ON `teachers`.`id` = `course_teacher`.`teacher_id`
